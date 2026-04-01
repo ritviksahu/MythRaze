@@ -1,0 +1,18 @@
+{
+  "name": "mythraze",
+  "version": "1.0.0",
+  "description": "Fake content detection assistant for images and videos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:network": "HOST=0.0.0.0 node server.js"
+  },
+  "keywords": [
+    "deepfake",
+    "forensics",
+    "media-analysis",
+    "hackathon"
+  ],
+  "author": "",
+  "license": "MIT"
+}

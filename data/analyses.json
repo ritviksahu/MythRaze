@@ -1,0 +1,218 @@
+[
+  {
+    "id": "TL-20260401-EDC607",
+    "createdAt": "2026-04-01T11:18:51.253Z",
+    "mediaType": "image",
+    "summary": "This image appears relatively consistent across the current forensic checks. It is likely authentic, although automated analysis can never guarantee certainty.",
+    "verdict": {
+      "label": "Likely Authentic",
+      "level": "low"
+    },
+    "confidence": 25,
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 33,
+        "level": "low",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 10,
+        "level": "low",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 25,
+        "level": "low",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 5,
+        "level": "low",
+        "description": "Near-zero weight for still imagery."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as likely authentic with 25% ensemble confidence.",
+      "Noise distribution remains closer to natural capture behavior and does not strongly suggest synthetic smoothing.",
+      "Compression patterns are comparatively stable and do not indicate strong edit boundaries.",
+      "Edge-to-texture mismatch suggests localized enhancement or generated detail insertion in some regions.",
+      "Still-image analysis processed a single frame and evaluated spatial and compression signals only."
+    ],
+    "recommendations": [
+      "No strong manipulation cues were found, but keep standard provenance checks in place.",
+      "Archive this report as a baseline authenticity review for later comparison.",
+      "Re-run analysis if a higher-resolution source file becomes available."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Image validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "seq-hash-456..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Extracted spatial, tonal, and compression-oriented forensic features.",
+        "status": "complete",
+        "metric": "42 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "25% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "33/10/25/5"
+      }
+    ],
+    "file": {
+      "name": "seq.jpg",
+      "type": "image/jpeg",
+      "sizeBytes": 54321,
+      "sizeLabel": "53.0 KB",
+      "hash": "seq-hash-456",
+      "previewImage": "data:image/jpeg;base64,AA==",
+      "sourceLabel": "User upload",
+      "isDemo": false
+    },
+    "metrics": {
+      "noiseScore": 22,
+      "blockinessScore": 10,
+      "bandingScore": 8,
+      "edgeChaos": 18,
+      "textureVariance": 52,
+      "symmetryScore": 68,
+      "temporalInstability": 0
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 1,
+      "duration": 0,
+      "width": 1200,
+      "height": 900,
+      "clientProcessingMs": 42
+    },
+    "requestCount": 1,
+    "lastAccessedAt": "2026-04-01T11:18:51.253Z"
+  },
+  {
+    "id": "TL-20260401-790DF8",
+    "createdAt": "2026-04-01T11:17:42.702Z",
+    "mediaType": "image",
+    "summary": "This image contains a mixed forensic signature. It may be genuine, but it should be verified manually before use in a high-trust workflow.",
+    "verdict": {
+      "label": "Needs Human Review",
+      "level": "medium"
+    },
+    "confidence": 53,
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 62,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 31,
+        "level": "low",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 29,
+        "level": "low",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 5,
+        "level": "low",
+        "description": "Near-zero weight for still imagery."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as needs human review with 53% ensemble confidence.",
+      "Noise structure appears unusually smooth, which is a common cue in AI-generated or aggressively retouched media.",
+      "Compression patterns are comparatively stable and do not indicate strong edit boundaries.",
+      "Edge-to-texture mismatch suggests localized enhancement or generated detail insertion in some regions.",
+      "Still-image analysis processed a single frame and evaluated spatial and compression signals only."
+    ],
+    "recommendations": [
+      "Mark this case for secondary review instead of auto-approving it.",
+      "Validate origin, capture context, and prior upload history before trust or redistribution.",
+      "Inspect the highest-risk regions manually if the media will inform a sensitive decision."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Image validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "demo-hash-12..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Extracted spatial, tonal, and compression-oriented forensic features.",
+        "status": "complete",
+        "metric": "87 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "53% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "62/31/29/5"
+      }
+    ],
+    "file": {
+      "name": "sample.jpg",
+      "type": "image/jpeg",
+      "sizeBytes": 123456,
+      "sizeLabel": "120.6 KB",
+      "hash": "demo-hash-123",
+      "previewImage": "data:image/jpeg;base64,AA==",
+      "sourceLabel": "User upload",
+      "isDemo": false
+    },
+    "metrics": {
+      "noiseScore": 80,
+      "blockinessScore": 35,
+      "bandingScore": 30,
+      "edgeChaos": 55,
+      "textureVariance": 22,
+      "symmetryScore": 72,
+      "temporalInstability": 0
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 1,
+      "duration": 0,
+      "width": 900,
+      "height": 900,
+      "clientProcessingMs": 87
+    },
+    "requestCount": 2,
+    "lastAccessedAt": "2026-04-01T11:17:43.177Z"
+  }
+]

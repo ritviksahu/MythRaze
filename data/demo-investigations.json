@@ -1,0 +1,570 @@
+[
+  {
+    "id": "MY-DEMO-IMG-01",
+    "createdAt": "2026-03-31T09:30:00.000Z",
+    "mediaType": "image",
+    "summary": "This portrait is treated as likely fake at 67% risk because the face looks plausible at first glance, but the skin is unusually airbrushed, the curls and hat rim stay selectively crisp, and the background falloff looks more synthesized than camera-noisy.",
+    "verdict": {
+      "label": "High Manipulation Risk",
+      "level": "high"
+    },
+    "confidence": 67,
+    "groundTruth": {
+      "label": "KNOWN FAKE SAMPLE",
+      "level": "high"
+    },
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 69,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 43,
+        "level": "medium",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 61,
+        "level": "high",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 5,
+        "level": "low",
+        "description": "Near-zero weight for still imagery."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as high manipulation risk with 67% ensemble confidence.",
+      "This curated benchmark is a known fake sample and is expected to be escalated by the moderation workflow.",
+      "Cheek, upper-lip, and jaw textures are flatter than expected for a close 900x1350 portrait, even though nearby curls retain clean edge definition.",
+      "Hair, hat rim, and face detail do not degrade at the same rate, which is a common cue in AI portraits that sharpen outlines while smoothing skin.",
+      "The stored demo asset is AVIF-encoded even though it carries a .jpg name, so format mismatch is another ingestion clue worth flagging.",
+      "Still-image analysis processed a single frame and evaluated spatial and compression signals only."
+    ],
+    "recommendations": [
+      "Escalate this case for manual review before sharing, publishing, or moderation approval.",
+      "Inspect the hairline, lips, and cheek transitions because generated portraits often lose believable micro-texture there first.",
+      "Request the original export or source file because the current asset uses a mismatched container and softened facial detail."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Image validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "6f6e678bd347..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Extracted spatial, tonal, and compression-oriented forensic features.",
+        "status": "complete",
+        "metric": "118 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "67% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "69/43/61/5"
+      }
+    ],
+    "file": {
+      "name": "i1.jpg",
+      "type": "image/avif",
+      "sizeBytes": 158502,
+      "sizeLabel": "154.8 KB",
+      "hash": "b04c7eba365c268517f0a6757043c41bfe9e08f17c99fb95626f30aabbd55187",
+      "assetPath": "/investigation-assets/i1.jpg",
+      "previewImage": "",
+      "sourceLabel": "Known fake demo sample • Images_videos",
+      "isDemo": true
+    },
+    "metrics": {
+      "noiseScore": 73,
+      "blockinessScore": 39,
+      "bandingScore": 34,
+      "edgeChaos": 57,
+      "textureVariance": 31,
+      "symmetryScore": 64,
+      "temporalInstability": 5
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 1,
+      "duration": 0,
+      "width": 900,
+      "height": 1350,
+      "clientProcessingMs": 118
+    },
+    "requestCount": 1,
+    "lastAccessedAt": "2026-03-31T09:30:00.000Z"
+  },
+  {
+    "id": "MY-DEMO-IMG-02",
+    "createdAt": "2026-03-31T09:44:00.000Z",
+    "mediaType": "image",
+    "summary": "This portrait is treated as likely fake at 86% risk because the face is extremely polished and symmetric, the skin detail is almost completely smoothed away, and the blue-magenta studio lighting looks cleaner and more uniform than a natural camera capture.",
+    "verdict": {
+      "label": "High Manipulation Risk",
+      "level": "high"
+    },
+    "confidence": 86,
+    "groundTruth": {
+      "label": "KNOWN FAKE SAMPLE",
+      "level": "high"
+    },
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 88,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 54,
+        "level": "medium",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 82,
+        "level": "high",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 5,
+        "level": "low",
+        "description": "Near-zero weight for still imagery."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as high manipulation risk with 86% ensemble confidence.",
+      "This curated benchmark is a known fake sample and is expected to be escalated by the moderation workflow.",
+      "Skin pore detail is almost absent across the cheeks and forehead even though the eyes, nose bridge, and lip contour remain clean and deliberate.",
+      "The colored lighting wraps very evenly around the face and background, which creates a studio-perfect look with less sensor noise than expected.",
+      "The stored demo asset is AVIF-encoded even though it carries a .jpg name, so format mismatch is another ingestion clue worth flagging.",
+      "Still-image analysis processed a single frame and evaluated spatial and compression signals only."
+    ],
+    "recommendations": [
+      "Escalate this case for manual review before sharing, publishing, or moderation approval.",
+      "Inspect the eyes, lips, loose front hair strand, and jaw contour because synthetic portrait generators often preserve shape while flattening real skin texture.",
+      "Request the original source export because the current image is highly polished and carried in a mismatched AVIF-under-JPG container."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Image validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "51080ac1ab44..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Extracted spatial, tonal, and compression-oriented forensic features.",
+        "status": "complete",
+        "metric": "126 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "86% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "88/54/82/5"
+      }
+    ],
+    "file": {
+      "name": "i2.jpg",
+      "type": "image/avif",
+      "sizeBytes": 150082,
+      "sizeLabel": "146.6 KB",
+      "hash": "4f543460ada82d2c08555c27e3f281e16f92997222d1e6f7730380a32a2b7d8b",
+      "assetPath": "/investigation-assets/i2.jpg",
+      "previewImage": "",
+      "sourceLabel": "Known fake demo sample • Images_videos",
+      "isDemo": true
+    },
+    "metrics": {
+      "noiseScore": 86,
+      "blockinessScore": 45,
+      "bandingScore": 41,
+      "edgeChaos": 64,
+      "textureVariance": 24,
+      "symmetryScore": 74,
+      "temporalInstability": 5
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 1,
+      "duration": 0,
+      "width": 900,
+      "height": 1125,
+      "clientProcessingMs": 126
+    },
+    "requestCount": 2,
+    "lastAccessedAt": "2026-03-31T09:44:00.000Z"
+  },
+  {
+    "id": "MY-DEMO-IMG-03",
+    "createdAt": "2026-03-31T10:02:00.000Z",
+    "mediaType": "image",
+    "summary": "This portrait is treated as likely fake at 72% risk because the smile and facial structure look believable, but the teeth, jersey print, and wall texture are cleaner and flatter than expected, which suggests heavy synthesis or aggressive AI retouching.",
+    "verdict": {
+      "label": "High Manipulation Risk",
+      "level": "high"
+    },
+    "confidence": 72,
+    "groundTruth": {
+      "label": "KNOWN FAKE SAMPLE",
+      "level": "high"
+    },
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 76,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 47,
+        "level": "medium",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 65,
+        "level": "high",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 5,
+        "level": "low",
+        "description": "Near-zero weight for still imagery."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as high manipulation risk with 72% ensemble confidence.",
+      "This curated benchmark is a known fake sample and is expected to be escalated by the moderation workflow.",
+      "Teeth, smile lines, and cheek shading are cleaner than expected for a natural outdoor portrait, which gives the face a lightly rendered look.",
+      "The jersey graphic, crest, and fabric folds do not carry as much textured deformation as a real sports shirt usually would at this framing.",
+      "The stored demo asset is AVIF-encoded even though it carries a .jpg name, so format mismatch is another ingestion clue worth flagging.",
+      "Still-image analysis processed a single frame and evaluated spatial and compression signals only."
+    ],
+    "recommendations": [
+      "Escalate this case for manual review before sharing, publishing, or moderation approval.",
+      "Inspect the teeth, jersey crest, neckline, and lower cheek where AI retouching often removes real texture while preserving overall shape.",
+      "Request the original source export because the current file is lightly compressed and stored in a mismatched AVIF-under-JPG container."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Image validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "6d49ed7c6da9..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Extracted spatial, tonal, and compression-oriented forensic features.",
+        "status": "complete",
+        "metric": "109 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "72% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "76/47/65/5"
+      }
+    ],
+    "file": {
+      "name": "i3.jpg",
+      "type": "image/avif",
+      "sizeBytes": 62767,
+      "sizeLabel": "61.3 KB",
+      "hash": "2e9f43c053acedaa8e2d05e578e0823fa8c5b2063d169a42b363804bb4c9f332",
+      "assetPath": "/investigation-assets/i3.jpg",
+      "previewImage": "",
+      "sourceLabel": "Known fake demo sample • Images_videos",
+      "isDemo": true
+    },
+    "metrics": {
+      "noiseScore": 79,
+      "blockinessScore": 43,
+      "bandingScore": 36,
+      "edgeChaos": 59,
+      "textureVariance": 30,
+      "symmetryScore": 62,
+      "temporalInstability": 5
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 1,
+      "duration": 0,
+      "width": 900,
+      "height": 1200,
+      "clientProcessingMs": 109
+    },
+    "requestCount": 1,
+    "lastAccessedAt": "2026-03-31T10:02:00.000Z"
+  },
+  {
+    "id": "MY-DEMO-VID-01",
+    "createdAt": "2026-03-31T10:18:00.000Z",
+    "mediaType": "video",
+    "summary": "This vertical clip is flagged because detail balance changes too much from frame to frame: some edges stay crisp while neighboring regions pulse softer, which is a common sign of synthetic video rendering or heavy face-editing.",
+    "verdict": {
+      "label": "High Manipulation Risk",
+      "level": "high"
+    },
+    "confidence": 84,
+    "groundTruth": {
+      "label": "KNOWN FAKE SAMPLE",
+      "level": "high"
+    },
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 82,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 69,
+        "level": "high",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 77,
+        "level": "high",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 81,
+        "level": "high",
+        "description": "Frame-to-frame stability and flicker behavior."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as high manipulation risk with 84% ensemble confidence.",
+      "This curated benchmark is a known fake sample and is expected to be escalated by the moderation workflow.",
+      "Across the sampled frames, texture and sharpness move unevenly, which suggests flicker-like generation artifacts rather than stable camera noise.",
+      "The vertical 720x1280 format looks like a phone capture, but its texture profile is too inconsistent over time for a natural handheld recording.",
+      "Temporal inspection sampled 8 frames across 18 seconds."
+    ],
+    "recommendations": [
+      "Escalate this case for manual review before sharing, publishing, or moderation approval.",
+      "Review moving edges frame by frame because generated videos often reveal flicker around faces, hands, or silhouette boundaries.",
+      "Compare multiple time points from the clip instead of one frame because the strongest evidence here is temporal instability."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Video validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "f95f9fac7f1c..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Sampled 8 frames and extracted spatial plus temporal forensic features.",
+        "status": "complete",
+        "metric": "247 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "84% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "82/69/77/81"
+      }
+    ],
+    "file": {
+      "name": "v1.mp4",
+      "type": "video/mp4",
+      "sizeBytes": 25225735,
+      "sizeLabel": "24.1 MB",
+      "hash": "f95f9fac7f1c1d44718d6afba71b810a434d2ce4ac39aa659c8755f92650e646",
+      "assetPath": "/investigation-assets/v1.mp4",
+      "previewImage": "",
+      "sourceLabel": "Known fake demo sample • Images_videos",
+      "isDemo": true
+    },
+    "metrics": {
+      "noiseScore": 78,
+      "blockinessScore": 63,
+      "bandingScore": 58,
+      "edgeChaos": 67,
+      "textureVariance": 23,
+      "symmetryScore": 46,
+      "temporalInstability": 81
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 8,
+      "duration": 18,
+      "width": 720,
+      "height": 1280,
+      "clientProcessingMs": 247
+    },
+    "requestCount": 2,
+    "lastAccessedAt": "2026-03-31T10:18:00.000Z"
+  },
+  {
+    "id": "MY-DEMO-VID-02",
+    "createdAt": "2026-03-31T10:36:00.000Z",
+    "mediaType": "video",
+    "summary": "This square clip is especially suspicious because it combines very low 512x512 resolution with heavy smoothing and strong frame-to-frame instability, a pattern often used to hide generation artifacts in fake video.",
+    "verdict": {
+      "label": "High Manipulation Risk",
+      "level": "high"
+    },
+    "confidence": 87,
+    "groundTruth": {
+      "label": "KNOWN FAKE SAMPLE",
+      "level": "high"
+    },
+    "signals": [
+      {
+        "title": "Artifact Risk",
+        "value": 88,
+        "level": "high",
+        "description": "Texture, edge, and generation cues."
+      },
+      {
+        "title": "Compression Risk",
+        "value": 74,
+        "level": "high",
+        "description": "Blockiness, banding, and re-encoding indicators."
+      },
+      {
+        "title": "Consistency Risk",
+        "value": 82,
+        "level": "high",
+        "description": "Regional coherence and spatial stability across the media."
+      },
+      {
+        "title": "Temporal Risk",
+        "value": 84,
+        "level": "high",
+        "description": "Frame-to-frame stability and flicker behavior."
+      }
+    ],
+    "insights": [
+      "Manipulation risk is classified as high manipulation risk with 87% ensemble confidence.",
+      "This curated benchmark is a known fake sample and is expected to be escalated by the moderation workflow.",
+      "The clip is both low-detail and temporally unstable, which means it hides real texture while still producing obvious flicker across sampled frames.",
+      "Its 512x512 square format preserves simplified geometry but not authentic micro-detail, which is typical of compressed synthetic short-form video.",
+      "Temporal inspection sampled 6 frames across 9 seconds."
+    ],
+    "recommendations": [
+      "Escalate this case for manual review before sharing, publishing, or moderation approval.",
+      "Scrub the clip frame by frame because the main risk here comes from flicker, smoothing, and unstable local geometry over time.",
+      "Request an original higher-resolution source because the current export is small enough to conceal many synthetic artifacts."
+    ],
+    "pipeline": [
+      {
+        "stage": "Media Intake",
+        "detail": "Video validated and fingerprinted for case tracking.",
+        "status": "complete",
+        "metric": "2ae00c156db8..."
+      },
+      {
+        "stage": "Feature Extraction",
+        "detail": "Sampled 6 frames and extracted spatial plus temporal forensic features.",
+        "status": "complete",
+        "metric": "206 ms"
+      },
+      {
+        "stage": "Ensemble Scoring",
+        "detail": "Combined artifact, compression, consistency, and temporal signals into a single verdict.",
+        "status": "complete",
+        "metric": "87% risk"
+      },
+      {
+        "stage": "Operational Triage",
+        "detail": "Generated an explainable report and recommended next actions for reviewers.",
+        "status": "complete",
+        "metric": "88/74/82/84"
+      }
+    ],
+    "file": {
+      "name": "v2.mp4",
+      "type": "video/mp4",
+      "sizeBytes": 1155109,
+      "sizeLabel": "1.1 MB",
+      "hash": "2ae00c156db892ca5ebaaebbf4a368ed5f62bc54ec38e409cb49b67dff999094",
+      "assetPath": "/investigation-assets/v2.mp4",
+      "previewImage": "",
+      "sourceLabel": "Known fake demo sample • Images_videos",
+      "isDemo": true
+    },
+    "metrics": {
+      "noiseScore": 91,
+      "blockinessScore": 72,
+      "bandingScore": 69,
+      "edgeChaos": 73,
+      "textureVariance": 16,
+      "symmetryScore": 34,
+      "temporalInstability": 84
+    },
+    "engine": {
+      "name": "Mythraze Forensic Ensemble",
+      "version": "2.2-calibrated",
+      "mode": "Browser extraction + shared server orchestration"
+    },
+    "extraContext": {
+      "frameCount": 6,
+      "duration": 9,
+      "width": 512,
+      "height": 512,
+      "clientProcessingMs": 206
+    },
+    "requestCount": 1,
+    "lastAccessedAt": "2026-03-31T10:36:00.000Z"
+  }
+]

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mythraze | Fake Content Detection Assistant</title>
+    <meta
+      name="description"
+      content="Mythraze is a complete web-based fake content detection assistant for images and videos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <span class="brand-mark-text">MYTH</span>
+            </span>
+            <div class="brand-copy">
+              <div class="brand-row">
+                <p>Mythraze</p>
+                <span class="brand-tag">Synthetic Media Forensics</span>
+              </div>
+              <span class="brand-subtitle">
+                Explainable image and video verification built for faster
+                moderation and review.
+              </span>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <span class="topbar-chip">
+              <span class="topbar-chip-dot" aria-hidden="true"></span>
+              Shared Case API
+            </span>
+            <a class="ghost-link topbar-link" href="#analyzer">Launch Analyzer</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <section class="hero-copy">
+            <div class="hero-kicker">
+              <span class="micro-badge">Live Product</span>
+              <span class="micro-badge micro-badge-light">Judge-Ready UI</span>
+            </div>
+            <h1>
+              Analyze suspicious images and videos with an
+              <span>shared, end-to-end forensic workflow.</span>
+            </h1>
+            <p class="hero-text">
+              Mythraze combines browser-side media feature extraction with a
+              backend verdict engine, shared-result caching, case history, report
+              export, and explainable triage guidance for real moderation and
+              verification teams.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="#analyzer">Analyze Media</a>
+              <a class="secondary-btn" href="#my-history">Your History</a>
+            </div>
+            <div class="hero-trust">
+              <article class="hero-proof">
+                <span>Multi-Client</span>
+                <strong>Shared cache + faster repeat verdicts</strong>
+              </article>
+              <article class="hero-proof">
+                <span>Complete Flow</span>
+                <strong>Upload, inspect, store, reopen, export</strong>
+              </article>
+              <article class="hero-proof">
+                <span>Visual Clarity</span>
+                <strong>Light theme with strong contrast and clean hierarchy</strong>
+              </article>
+            </div>
+          </section>
+
+          <aside class="hero-panel">
+            <div class="panel-card panel-card-primary">
+              <p class="panel-label">Detection Stack</p>
+              <h3>Four signal families, one explainable verdict</h3>
+              <ul>
+                <li>Spatial artifact analysis</li>
+                <li>Compression anomaly analysis</li>
+                <li>Cross-region consistency analysis</li>
+                <li>Temporal stability analysis</li>
+              </ul>
+            </div>
+            <div class="hero-mini-grid">
+              <article class="mini-card">
+                <span class="mini-card-label">Signal Balance</span>
+                <div class="mini-meter" aria-hidden="true">
+                  <span class="mini-meter-fill"></span>
+                </div>
+                <p>Weighted ensemble scoring keeps decisions readable and fair.</p>
+              </article>
+              <article class="mini-card">
+                <span class="mini-card-label">Review Path</span>
+                <div class="mini-steps" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <p>Upload, analyze, review, export without leaving the same console.</p>
+              </article>
+            </div>
+            <div class="stat-row">
+              <article class="stat-card">
+                <span>Workflow</span>
+                <strong>E2E</strong>
+              </article>
+              <article class="stat-card">
+                <span>Media Types</span>
+                <strong>2</strong>
+              </article>
+              <article class="stat-card">
+                <span>Reports</span>
+                <strong>JSON</strong>
+              </article>
+            </div>
+          </aside>
+        </div>
+
+        <section class="ops-strip">
+          <article class="ops-card">
+            <span>API Status</span>
+            <strong id="backendStatusText">Checking...</strong>
+            <p id="backendSummaryText">Connecting to backend services.</p>
+          </article>
+          <article class="ops-card">
+            <span>Stored Cases</span>
+            <strong id="storedCasesValue">0</strong>
+            <p>Recent investigations shared across clients and retained for review.</p>
+          </article>
+          <article class="ops-card">
+            <span>Engine Mode</span>
+            <strong id="engineModeValue">Loading...</strong>
+            <p>Shared API mode with async persistence and fingerprint caching.</p>
+          </article>
+        </section>
+      </header>
+
+      <main>
+        <section class="analyzer-section" id="analyzer">
+          <div class="section-head">
+            <p class="eyebrow">Analysis Console</p>
+            <h2>Upload media, compute forensic signals, and generate a case report</h2>
+            <p class="section-intro">
+              Built to feel like a polished moderation product instead of a plain
+              demo screen.
+            </p>
+          </div>
+
+          <div class="analyzer-layout">
+            <section class="upload-card">
+              <label class="dropzone" id="dropzone" for="fileInput">
+                <input
+                  id="fileInput"
+                  type="file"
+                  accept="image/*,video/*"
+                  hidden
+                />
+                <div class="dropzone-copy">
+                  <p class="dropzone-title">Upload image or video evidence</p>
+                  <p class="dropzone-subtitle">
+                    The browser extracts forensic features, then the backend stores
+                    the case, scores the risk, and returns an explainable report.
+                  </p>
+                  <span class="dropzone-cta">Choose File</span>
+                </div>
+              </label>
+
+              <div class="preview-card">
+                <div id="previewContainer" class="preview-empty">
+                  <p>Media preview will appear here</p>
+                </div>
+                <div class="action-row preview-actions">
+                  <button id="viewPreviewButton" class="secondary-btn" disabled>
+                    View Full Media
+                  </button>
+                  <button id="analyzeButton" class="primary-btn" disabled>
+                    Analyze Media
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="results-card">
+              <div class="results-header">
+                <div>
+                  <p class="eyebrow">Verdict</p>
+                  <h3 id="verdictTitle">Awaiting upload</h3>
+                </div>
+                <div class="score-pill" id="scorePill">--</div>
+              </div>
+
+              <p class="result-summary" id="summaryText">
+                Upload a media file to begin full workflow analysis.
+              </p>
+
+              <div class="meter-block">
+                <div class="meter-track">
+                  <div class="meter-fill" id="meterFill"></div>
+                </div>
+                <div class="meter-labels">
+                  <span>Likely Authentic</span>
+                  <span>High Manipulation Risk</span>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <article class="meta-card">
+                  <span>Case ID</span>
+                  <strong id="caseIdValue">--</strong>
+                </article>
+                <article class="meta-card">
+                  <span>File</span>
+                  <strong id="fileMetaValue">--</strong>
+                </article>
+                <article class="meta-card">
+                  <span>Fingerprint</span>
+                  <strong id="hashValue">--</strong>
+                </article>
+                <article class="meta-card">
+                  <span>Engine</span>
+                  <strong id="engineValue">--</strong>
+                </article>
+              </div>
+
+              <div class="results-actions">
+                <button id="downloadReportButton" class="secondary-btn" disabled>
+                  Download Report
+                </button>
+                <button id="refreshHistoryButton" class="secondary-btn">
+                  Refresh Cases
+                </button>
+              </div>
+
+              <div class="signals-grid" id="signalsGrid"></div>
+
+              <div class="detail-grid">
+                <div class="insights-card">
+                  <h4>Pipeline Stages</h4>
+                  <ul id="pipelineList" class="insights-list">
+                    <li>No pipeline run yet.</li>
+                  </ul>
+                </div>
+                <div class="insights-card">
+                  <h4>Recommended Actions</h4>
+                  <ul id="recommendationsList" class="insights-list">
+                    <li>No recommendations yet.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="insights-card">
+                <h4>Investigation Notes</h4>
+                <ul id="insightsList" class="insights-list">
+                  <li>No analysis yet.</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="history-section history-section-user" id="my-history">
+          <div class="section-head">
+            <p class="eyebrow">Your Search History</p>
+            <h2>Your own uploads stay separate from the demo investigation gallery</h2>
+            <p class="section-intro">
+              Every image or video you analyze appears here with its original media,
+              verdict, and timestamp for the current browser session. Refreshing the
+              page clears this section.
+            </p>
+          </div>
+
+          <div id="userHistoryList" class="history-list">
+            <article class="history-empty">
+              <p>Your uploaded investigations will appear here after analysis.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="history-section" id="history">
+          <div class="section-head">
+            <p class="eyebrow">Demo Investigations</p>
+            <h2>Curated stored investigations make the demo feel like a real moderation tool</h2>
+            <p class="section-intro">
+              These curated investigations are known fake samples from your local
+              demo set, so guides can review suspicious cases without mixing them
+              with your own uploads.
+            </p>
+          </div>
+
+          <div id="historyList" class="history-list">
+            <article class="history-empty">
+              <p>No demo investigations available.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="how-section" id="how-it-works">
+          <div class="section-head">
+            <p class="eyebrow">Why It Works</p>
+            <h2>Built for practical review flows, not just a single-screen prototype</h2>
+            <p class="section-intro">
+              The interface, workflow, and evidence presentation are designed to make
+              technical output feel approachable and trustworthy.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Backend-Assisted Verdicts</h3>
+              <p>
+                The client extracts forensic features and the backend generates the
+                official case verdict, signal breakdown, and report object.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Persistent Case History</h3>
+              <p>
+                Every analysis is stored server-side, making it possible to review
+                older investigations during a live demo or evaluation across
+                multiple connected clients.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Operational Explainability</h3>
+              <p>
+                The system does not stop at a score. It returns pipeline steps,
+                evidence notes, and next-step recommendations for reviewers.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Zero-Dependency Deployment</h3>
+              <p>
+                It runs with `npm start`, needs no external services, and is easy to
+                host or submit as a complete hackathon project. Use `HOST=0.0.0.0`
+                when you want other devices on the network to connect.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="mediaModal" class="media-modal" hidden aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-media-modal></div>
+      <div
+        class="media-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mediaModalTitle"
+      >
+        <div class="media-modal-header">
+          <div class="media-modal-copy">
+            <p class="eyebrow">Full Media Viewer</p>
+            <h3 id="mediaModalTitle">Saved investigation media</h3>
+            <p id="mediaModalMeta" class="section-intro">
+              Full image or video preview for the selected investigation.
+            </p>
+          </div>
+          <button id="closeMediaModalButton" class="secondary-btn media-modal-close">
+            Close
+          </button>
+        </div>
+        <div id="mediaModalContent" class="media-modal-content"></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
